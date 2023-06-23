@@ -36,7 +36,9 @@ const about = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="flex items-center justify-center mb-8"
         >
-          <img src="/profile-image.jpg" alt="Profile" className="rounded-full w-32 h-32" />
+          <a href="https://www.facebook.com/jomer6496">
+            <img src="/profile-image.jpg" alt="Profile" className="rounded-full w-32 h-32" />
+          </a>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
