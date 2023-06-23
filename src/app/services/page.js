@@ -1,6 +1,7 @@
 "use client"
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
+import ServicesPage from '@/components/ServicesPages';
 
 const services = () => {
   const services = [
@@ -21,8 +22,8 @@ const services = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <Navbar />
-      <div className="max-w-4xl p-8 mx-auto">
-        <h1 className="text-4xl font-bold mb-8 text-center">Services</h1>
+      <ServicesPage />
+      <div className="max-w-4xl mx-auto">
         {services.map((service, index) => (
           <motion.div
             key={index}
@@ -35,7 +36,7 @@ const services = () => {
             <p className="text-lg">{service.description}</p>
           </motion.div>
         ))}
-        {/* Rest of the code... */}
+        
       </div>
     </div>
   );
