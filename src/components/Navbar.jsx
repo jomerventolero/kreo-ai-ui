@@ -18,10 +18,10 @@ const Navbar = () => {
           </div>
         </div>
         <div className="fixed bottom-0 left-0 flex flex-row h-48 w-full gap-10 items-end justify-between bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-            <a href="/about" className="font-sans font-medium">
+            <a href="/about" className="font-sans font-medium hover:text-blue-200">
                 About
             </a>
-            <a href="/services" className="font-sans font-medium">
+            <a href="/services" className="font-sans font-medium hover:text-blue-200">
                 Services
             </a>
           </div>
