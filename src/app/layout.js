@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Kreo Imagine AI',
-  description: 'Developed by Jomer Augustin Ventolero',
+  description: 'Developed by Jomer Augustin Ventolero.',
 }
 
 export default function RootLayout({ children }) {
