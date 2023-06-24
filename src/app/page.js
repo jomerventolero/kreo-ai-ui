@@ -62,7 +62,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 1.1 }}
-        className="absolute bottom-10 mb-16 grid text-center lg:grid-cols-4 lg:text-left">
+        className="absolute bottom-2 mb-16 grid text-center lg:grid-cols-4 lg:text-left">
         <a
           href="https://3b2d-45-194-11-194.ngrok-free.app/"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
