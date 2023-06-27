@@ -1,6 +1,7 @@
 "use client";
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
+import AnimatedHeading from '@/components/AnimatedHeading';
 
 const about = () => {
   return (
@@ -14,7 +15,7 @@ const about = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-8 justify-center flex flex-col items-center"
         >
-          <h2 className="text-xl font-bold mb-4">Kreo Imagine AI</h2>
+          <AnimatedHeading className="text-4xl text-violet-500" headingText={'KREO IMAGINE AI'} />
           <p className="text-lg text-center">
             Welcome to my website! Here, I leverage the power of the DDPM machine learning algorithm to generate high-quality images from text inputs. This cutting-edge technology allows me to transform your descriptions and ideas into stunning visual representations. Whether you're a designer, writer, or simply someone who wants to explore the creative possibilities, I'm here to bring your imagination to life.
           </p>
@@ -25,7 +26,7 @@ const about = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mb-8"
         >
-          <h1 className="text-4xl font-bold mb-8 text-center">About Me</h1>
+          <AnimatedHeading className="text-4xl text-violet-500 text-center" headingText={'ABOUT ME'} />
           <p className="text-lg text-center">
             I am an independent developer based in the Philippines. Currently, I work as an IT Administrator at Bespoke Enterprise Solutions Inc. and I am also a Fullstack Developer. With my combined experience in IT administration and development, I bring a unique perspective to solving problems and creating innovative solutions.
           </p>
@@ -46,6 +47,15 @@ const about = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="flex items-center justify-center mb-8"
         >
+          <code className="text-xl">Jomer Augustin Ventolero</code>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="flex items-center justify-center mb-8"
+        >
+          
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6 mr-2">
             <path
               className="fill-current text-blue-500"
@@ -70,7 +80,7 @@ const about = () => {
               d="M12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
             />
           </svg>
-          <p className="text-lg">Occupation: IT Administrator & Fullstack Developer</p>
+          <p className="text-lg">Profession: IT Administrator & Fullstack Developer</p>
         </motion.div>
       </div>
     </div>
