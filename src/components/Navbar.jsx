@@ -3,7 +3,7 @@ import AnimatedHeading from './AnimatedHeading'
 
 const Navbar = () => {
   return (
-    <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-2xl lg:flex">
+    <div className="z-10 w-full px-10 items-center justify-between font-mono text-2xl lg:flex">
         <div className="fixed bottom-0 left-0 flex flex-row h-48 w-full items-end justify-between bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
           <div className="flex flex-row">
             <a href="/">
