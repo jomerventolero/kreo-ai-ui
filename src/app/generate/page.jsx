@@ -43,7 +43,7 @@ const Page = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="flex flex-col justify-start px-12 pt-8"
         >
-          <span className='font-sans pb-2 font-semibold'>Enter Prompt:</span>
+          <span className='font-sans pb-2 font-semibold text-violet-500'>Enter Prompt:</span>
           <textarea
             id="prompt"
             onChange={handleChange}
@@ -57,7 +57,7 @@ const Page = () => {
           transition={{ duration: 0.6, delay: 1 }}
           className="flex flex-col justify-start px-12 pt-8"
         >
-          <span className='font-sans pb-2 font-semibold'>Negative Prompt:</span>
+          <span className='font-sans pb-2 font-semibold text-violet-500'>Negative Prompt:</span>
           <textarea
             id="negative_prompt"
             onChange={handleChange}
@@ -71,10 +71,10 @@ const Page = () => {
           transition={{ duration: 0.6, delay: 1.5 }}
           className="flex flex-col justify-start px-12 pt-8"
         >
-          <label htmlFor="sampler_name" className="font-semibold">
+          <label htmlFor="sampler_name" className="font-semibold text-violet-500">
             Sampler:
             <select
-              className="text-black font-semibold rounded-sm p-[2px] ml-2"
+              className="text-black rounded-sm p-[2px] ml-2"
               id="sampler_name"
               name="sampler_name"
               defaultValue="dpmpp_2s_a"
@@ -86,8 +86,6 @@ const Page = () => {
               <option value="lms">LMS</option>
               <option value="dpm_solver_stability">DPM Solver (Stability AI)</option>
               <option value="dpmpp_2s_a">DPM++ 2s Ancestral</option>
-              <option value="dpmpp_2m">DPM++ 2m</option>
-              <option value="dpmpp_sde">DPM++ SDE</option>
               <option value="dpm_fast">DPM Fast</option>
               <option value="dpm_adaptive">DPM Adaptive</option>
             </select>
