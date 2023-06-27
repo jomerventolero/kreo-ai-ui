@@ -67,7 +67,7 @@ export default function Home() {
         transition={{ duration: 0.6, delay: 1.1 }}
         className="absolute bottom-3 mb-16 grid text-center lg:grid-cols-4 lg:text-left">
         <a
-          href="https://d86e-45-194-11-194.ngrok-free.app"
+          href="https://0780-45-194-11-194.ngrok-free.app/"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
         >
           <AnimatedHeading className="pl-0 hover:text-violet-500" headingText={'GENERATE'}/>
