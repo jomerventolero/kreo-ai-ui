@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
+import AnimatedHeading from '@/components/AnimatedHeading';
 
 
 export default function Home() {
@@ -14,9 +15,11 @@ export default function Home() {
         transition={{ duration: 0.6, delay: 1.1 }}
         className="absolute left-48 top-48 rounded-xl z-10"
       >
-        <h1 className="text-4xl font-bold glass-text text-left mb-8 leading-snug">
-          Generate <br/>Images from <br/>Text. 
-        </h1>
+        <div className="text-5xl font-bold glass-text text-left leading-snug">
+          <AnimatedHeading className="text-5xl" headingText={'GENERATE'}/>
+          <AnimatedHeading headingText={'IMAGES FROM'} />
+          <AnimatedHeading headingText={'TEXT'} />
+        </div>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -64,15 +67,10 @@ export default function Home() {
         transition={{ duration: 0.6, delay: 1.1 }}
         className="absolute bottom-3 mb-16 grid text-center lg:grid-cols-4 lg:text-left">
         <a
-          href="https://3b2d-45-194-11-194.ngrok-free.app/"
+          href="https://d86e-45-194-11-194.ngrok-free.app"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
         >
-          <h2 className={`mb-3 text-2xl font-semibold transition-transform group-hover:translate-x-1 motion-reduce:transform-none`}>
-            GENERATE
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
+          <AnimatedHeading className="pl-0 hover:text-violet-500" headingText={'GENERATE'}/>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50 hover:text-md`}>
             Generate AI Images from your text input.
           </p>

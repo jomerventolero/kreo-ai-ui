@@ -1,9 +1,9 @@
-"use client";
-import React, {useState} from 'react'
-import { motion } from 'framer-motion'
-import Navbar from '@/components/Navbar'
+"use client"
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import Navbar from '@/components/Navbar';
 
-const page = () => {
+const Page = () => {
   const [formData, setFormData] = useState({
     guidance_scale: 7.0,
     height: 512,
@@ -16,7 +16,7 @@ const page = () => {
     sampler_name: "dpmpp_2s_a",
     seed: 3441212,
     width: 512
-  })
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,11 +26,14 @@ const page = () => {
     }));
   };
 
+  useEffect(() => {
+    // This effect won't be executed on the server-side
+    // It will only run on the client-side after the initial render
+  }, []);
+
   return (
     <div className='flex flex-col justify-center mx-auto'>
-      <motion.div
-        className="px-10 pt-4"
-        >
+      <motion.div className="px-10 pt-4">
         <Navbar />
       </motion.div>
       <form>
@@ -39,28 +42,60 @@ const page = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="flex flex-col justify-start px-12 pt-8"
-          >
-          <span className='font-sans pb-4'>Enter Prompt:</span>
-          <textarea id="prompt"
+        >
+          <span className='font-sans pb-2 font-semibold'>Enter Prompt:</span>
+          <textarea
+            id="prompt"
             onChange={handleChange}
-            className='p-2 w-1/4 h-[250px] rounded-xl text-black' defaultValue="studio ghibli, aesthetic, rendering, forest, swamp, scatter lighting, volumetrics, (masterpiece), best quality, (detailed)"/>
+            className='p-2 w-1/4 h-[250px] rounded-xl text-black'
+            defaultValue="studio ghibli, aesthetic, rendering, forest, swamp, scatter lighting, volumetrics, (masterpiece), best quality, (detailed)"
+          />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
           className="flex flex-col justify-start px-12 pt-8"
-          >
-          <span className='font-sans pb-4'>Negative Prompt:</span>
-          <textarea id="negative_prompt"
+        >
+          <span className='font-sans pb-2 font-semibold'>Negative Prompt:</span>
+          <textarea
+            id="negative_prompt"
             onChange={handleChange}
-            className='p-2 w-1/4 h-[100px] rounded-xl text-black' 
+            className='p-2 w-1/4 h-[100px] rounded-xl text-black'
             defaultValue="(easynegative),(signature:1.2),(artist name:1.2),(watermark:1.2)"
           />
         </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.5 }}
+          className="flex flex-col justify-start px-12 pt-8"
+        >
+          <label htmlFor="sampler_name" className="font-semibold">
+            Sampler:
+            <select
+              className="text-black font-semibold rounded-sm p-[2px] ml-2"
+              id="sampler_name"
+              name="sampler_name"
+              defaultValue="dpmpp_2s_a"
+            >
+              <option value="euler">Euler</option>
+              <option value="euler_a">Euler Ancestral</option>
+              <option value="dpm2">DPM2</option>
+              <option value="dpm2_a">DPM2 Ancestral</option>
+              <option value="lms">LMS</option>
+              <option value="dpm_solver_stability">DPM Solver (Stability AI)</option>
+              <option value="dpmpp_2s_a">DPM++ 2s Ancestral</option>
+              <option value="dpmpp_2m">DPM++ 2m</option>
+              <option value="dpmpp_sde">DPM++ SDE</option>
+              <option value="dpm_fast">DPM Fast</option>
+              <option value="dpm_adaptive">DPM Adaptive</option>
+            </select>
+          </label>
+        </motion.div>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;

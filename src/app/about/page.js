@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar';
 
 const about = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <div className="flex flex-col items-center justify-center min-h-screen pt-4">
       <Navbar />
       <div className="max-w-4xl p-8 mx-auto">
         
